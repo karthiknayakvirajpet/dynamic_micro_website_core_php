@@ -41,7 +41,9 @@ sliderContainer.addEventListener('mouseleave', function () {
 
 // Fetch API to get data from cURL script
 var apiUrl = 'https://dummyjson.com/products?limit=10';
-fetch('curl_script.php?api_url=' + encodeURIComponent(apiUrl))
+
+//fetch('curl_script.php?api_url=' + encodeURIComponent(apiUrl))
+fetch('curl_script.php?api_url=' + apiUrl)
     .then(response => response.json())
     .then(data => {
         // Load images to the slider

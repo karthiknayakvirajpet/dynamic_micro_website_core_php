@@ -12,7 +12,9 @@
 // Fetch API to get data from cURL script
 <?php $product_id = isset($_GET['product_id']) ? $_GET['product_id'] : null; ?>
 var apiUrl = 'https://dummyjson.com/products/<?php echo $product_id; ?>';
-fetch('../../curl_script.php?api_url=' + encodeURIComponent(apiUrl))
+
+//fetch('../../curl_script.php?api_url=' + encodeURIComponent(apiUrl))
+fetch('../../curl_script.php?api_url=' + apiUrl)
     .then(response => response.json())
     .then(data => {
         // Load data to the table
